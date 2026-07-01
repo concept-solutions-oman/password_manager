@@ -1,6 +1,6 @@
 {
     'name' : 'Concept Password Management',
-    'author' : 'Concept Solution',
+    'author' : 'Concept Solutions',
     'sequence' : '0',
     'website': 'https://www.csloman.com',
     'summary': 'A centralized, ultra-secure hub for managing customer credentials, reducing search time and securing access.',
