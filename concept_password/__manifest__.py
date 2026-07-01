@@ -49,8 +49,8 @@ Access Control:
     ],
     'assets': {
         'web.assets_backend': [
-             'password_managment/static/src/js/simple_copy_clipboard.js',
-             'password_managment/static/src/xml/simple_copy_clipboard.xml',
+             'concept_password/static/src/js/simple_copy_clipboard.js',
+             'concept_password/static/src/xml/simple_copy_clipboard.xml',
         ],
     },
 

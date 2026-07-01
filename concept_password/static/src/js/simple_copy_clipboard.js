@@ -41,7 +41,7 @@ export class SimpleCopyClipboard extends Component {
     }
 }
 
-SimpleCopyClipboard.template = "password_managment.SimpleCopyClipboard";
+SimpleCopyClipboard.template = "concept_password.SimpleCopyClipboard";
 SimpleCopyClipboard.props = {
     ...standardFieldProps,
 };

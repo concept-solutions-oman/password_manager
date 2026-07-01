@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <templates xml:space="preserve">
-    <t t-name="password_managment.SimpleCopyClipboard" owl="1">
+    <t t-name="concept_password.SimpleCopyClipboard" owl="1">
         <div class="d-flex align-items-center">
             <span class="me-2 text-truncate" style="max-width: 200px;">
                 <t t-esc="formattedValue"/>
