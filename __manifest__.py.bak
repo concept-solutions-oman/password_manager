@@ -1,0 +1,45 @@
+{
+    'name' : 'Concept Password Managment',
+    'author' : 'Concept Solution',
+    'sequence' : '0',
+    'website' : 'https://www.conceptgrps.com',
+    'summary' : 'Securely manage passwords, devices, and access rights for customers.',
+    'description': """
+Concept Password Management
+===========================
+A robust module for managing securely customer passwords and device credentials.
+
+Features:
+---------
+*   **Centralized Password Hub**: Manage all customer passwords in one place.
+*   **Device/Application Tracking**: Link passwords to specific devices or applications.
+*   **Secure Access Control**:
+    *   **Administrator**: Full access to all records.
+    *   **Assigned Users**: Read-only/Write access limited to assigned records.
+*   **One-Click Copy**: Custom widgets to easily copy usernames, passwords, and URLs.
+*   **Advanced Filtering**: Filter by Customer, Device, or search globally.
+*   **Sidebar Navigation**: Quickly switch between Devices and Customers.
+*   **Visual Enhancements**: Clean UI with masked passwords and styled links.
+    """,
+    'installable': True,
+    'application': True,
+    'version': '17.0.1.0',
+    'category': 'Administrator',
+    'depends' : ['mail', 'product', 'project'],
+    'data' :[
+        'security/security.xml',
+        'security/ir.model.access.csv',
+        'wizard/update_password.xml',
+        'views/menu.xml',
+        'views/password_form_view.xml',
+        'views/device_list_view.xml',
+        'views/project_task_views.xml',
+        
+    ],
+    'assets': {
+        'web.assets_backend': [
+             'password_managment/static/src/js/simple_copy_clipboard.js',
+             'password_managment/static/src/xml/simple_copy_clipboard.xml',
+        ],
+    },
+}

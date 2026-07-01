@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <menuitem name="Password Manager" id="menu_pasw_root"/>
+    
+
+</odoo>

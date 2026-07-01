@@ -1,0 +1,10 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_device_list,access_device_list,model_device_list,group_password_manager,1,1,1,1
+access_device_list_user,access_device_list_user,model_device_list,base.group_user,1,0,0,0
+access_password_form_admin,access_password_form_admin,model_password_form,group_password_manager,1,1,1,1
+access_password_form_user,access_password_form_user,model_password_form,base.group_user,1,1,1,0
+access_device_list_lines_admin,access_device_list_lines_admin,model_device_list_lines,group_password_manager,1,1,1,1
+access_device_list_lines_user,access_device_list_lines_user,model_device_list_lines,base.group_user,1,1,1,1
+access_update_password_wizard_admin,access_update_password_wizard_admin,model_update_password_wizard,group_password_manager,1,1,1,1
+access_update_password_wizard_user,access_update_password_wizard_user,model_update_password_wizard,base.group_user,1,1,1,0
+

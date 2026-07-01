@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="password_managment.SimpleCopyClipboard" owl="1">
+        <div class="d-flex align-items-center">
+            <span class="me-2 text-truncate" style="max-width: 200px;">
+                <t t-esc="formattedValue"/>
+            </span>
+            <i class="fa fa-clone text-primary cursor-pointer o_clipboard_button" 
+               title="Copy" 
+               t-on-click.stop="onCopy"
+               style="cursor: pointer; opacity: 0.7;"
+               onmouseover="this.style.opacity=1"
+               onmouseout="this.style.opacity=0.7"/>
+        </div>
+    </t>
+</templates>

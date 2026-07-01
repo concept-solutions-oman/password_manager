@@ -1,0 +1,177 @@
+<odoo>
+    <data noupdate="0">
+        <!-- Dummy Partners -->
+        <record id="demo_partner_alpha_1" model="res.partner">
+            <field name="name">Alpha Technologies (Demo)</field>
+        </record>
+        <record id="demo_partner_beta_1" model="res.partner">
+            <field name="name">Beta Solutions (Demo)</field>
+        </record>
+        <record id="demo_partner_gamma_1" model="res.partner">
+            <field name="name">Gamma Industries (Demo)</field>
+        </record>
+        <record id="demo_partner_delta_1" model="res.partner">
+            <field name="name">Delta Enterprises (Demo)</field>
+        </record>
+
+        <!-- Device List Data -->
+        <record id="device_ubuntu_1" model="device.list">
+            <field name="name">Ubuntu Server</field>
+        </record>
+        <record id="device_wordpress_1" model="device.list">
+            <field name="name">WordPress Admin</field>
+        </record>
+        <record id="device_aws_1" model="device.list">
+            <field name="name">AWS Console</field>
+        </record>
+        <record id="device_cpanel_1" model="device.list">
+            <field name="name">cPanel</field>
+        </record>
+        <record id="device_ftp_1" model="device.list">
+            <field name="name">FTP Server</field>
+        </record>
+
+        <!-- Password Form Data -->
+        <record id="demo_pwd_form_alpha" model="password.form">
+            <field name="partner_id" ref="demo_partner_alpha_1"/>
+        </record>
+        <record id="demo_pwd_form_beta" model="password.form">
+            <field name="partner_id" ref="demo_partner_beta_1"/>
+        </record>
+        <record id="demo_pwd_form_gamma" model="password.form">
+            <field name="partner_id" ref="demo_partner_gamma_1"/>
+        </record>
+        <record id="demo_pwd_form_delta" model="password.form">
+            <field name="partner_id" ref="demo_partner_delta_1"/>
+        </record>
+
+        <!-- Alpha Technologies Passwords -->
+        <record id="demo_line_alpha_1" model="device.list.lines">
+            <field name="device_id" ref="device_ubuntu_1"/>
+            <field name="user_name">root</field>
+            <field name="name">Prod Server 1</field>
+            <field name="ip_name">192.168.10.5</field>
+            <field name="url">ssh://192.168.10.5</field>
+            <field name="password_name">AlphaR00t!</field>
+            <field name="description">Main production server for Alpha.</field>
+            <field name="password_form_id" ref="demo_pwd_form_alpha"/>
+            <field name="partner_id" ref="demo_partner_alpha_1"/>
+        </record>
+        <record id="demo_line_alpha_2" model="device.list.lines">
+            <field name="device_id" ref="device_aws_1"/>
+            <field name="user_name">admin_alpha</field>
+            <field name="name">AWS Root</field>
+            <field name="ip_name">172.16.1.1</field>
+            <field name="url">https://aws.amazon.com/console</field>
+            <field name="password_name">AwsAlpha99$</field>
+            <field name="description">AWS Console for Alpha.</field>
+            <field name="password_form_id" ref="demo_pwd_form_alpha"/>
+            <field name="partner_id" ref="demo_partner_alpha_1"/>
+        </record>
+
+        <!-- Beta Solutions Passwords -->
+        <record id="demo_line_beta_1" model="device.list.lines">
+            <field name="device_id" ref="device_wordpress_1"/>
+            <field name="user_name">wp_admin</field>
+            <field name="name">Beta Website</field>
+            <field name="ip_name">10.0.1.20</field>
+            <field name="url">https://beta-solutions.com/wp-admin</field>
+            <field name="password_name">BetaWP2026!</field>
+            <field name="description">WordPress Admin panel.</field>
+            <field name="password_form_id" ref="demo_pwd_form_beta"/>
+            <field name="partner_id" ref="demo_partner_beta_1"/>
+        </record>
+        <record id="demo_line_beta_2" model="device.list.lines">
+            <field name="device_id" ref="device_cpanel_1"/>
+            <field name="user_name">beta_host</field>
+            <field name="name">cPanel Hosting</field>
+            <field name="ip_name">10.0.1.21</field>
+            <field name="url">https://beta-solutions.com:2083</field>
+            <field name="password_name">HostBeta2083</field>
+            <field name="description">cPanel access for Beta.</field>
+            <field name="password_form_id" ref="demo_pwd_form_beta"/>
+            <field name="partner_id" ref="demo_partner_beta_1"/>
+        </record>
+        <record id="demo_line_beta_3" model="device.list.lines">
+            <field name="device_id" ref="device_ftp_1"/>
+            <field name="user_name">ftp_beta</field>
+            <field name="name">Beta FTP</field>
+            <field name="ip_name">10.0.1.22</field>
+            <field name="url">ftp://ftp.beta-solutions.com</field>
+            <field name="password_name">FtpB3t@!</field>
+            <field name="description">FTP access for Beta files.</field>
+            <field name="password_form_id" ref="demo_pwd_form_beta"/>
+            <field name="partner_id" ref="demo_partner_beta_1"/>
+        </record>
+
+        <!-- Gamma Industries Passwords -->
+        <record id="demo_line_gamma_1" model="device.list.lines">
+            <field name="device_id" ref="device_ubuntu_1"/>
+            <field name="user_name">gamma_root</field>
+            <field name="name">Gamma Server 1</field>
+            <field name="ip_name">192.168.20.1</field>
+            <field name="url">ssh://192.168.20.1</field>
+            <field name="password_name">G@mmaR00t#</field>
+            <field name="description">Gamma internal server.</field>
+            <field name="password_form_id" ref="demo_pwd_form_gamma"/>
+            <field name="partner_id" ref="demo_partner_gamma_1"/>
+        </record>
+        <record id="demo_line_gamma_2" model="device.list.lines">
+            <field name="device_id" ref="device_ubuntu_1"/>
+            <field name="user_name">gamma_backup</field>
+            <field name="name">Gamma Backup Server</field>
+            <field name="ip_name">192.168.20.2</field>
+            <field name="url">ssh://192.168.20.2</field>
+            <field name="password_name">G@mmaBckup!</field>
+            <field name="description">Gamma backup server.</field>
+            <field name="password_form_id" ref="demo_pwd_form_gamma"/>
+            <field name="partner_id" ref="demo_partner_gamma_1"/>
+        </record>
+        <record id="demo_line_gamma_3" model="device.list.lines">
+            <field name="device_id" ref="device_cpanel_1"/>
+            <field name="user_name">gamma_admin</field>
+            <field name="name">Gamma cPanel</field>
+            <field name="ip_name">192.168.20.3</field>
+            <field name="url">https://gamma-ind.com:2083</field>
+            <field name="password_name">G@mm@CPNL</field>
+            <field name="description">Gamma cPanel.</field>
+            <field name="password_form_id" ref="demo_pwd_form_gamma"/>
+            <field name="partner_id" ref="demo_partner_gamma_1"/>
+        </record>
+
+        <!-- Delta Enterprises Passwords -->
+        <record id="demo_line_delta_1" model="device.list.lines">
+            <field name="device_id" ref="device_aws_1"/>
+            <field name="user_name">delta_aws</field>
+            <field name="name">Delta AWS Access</field>
+            <field name="ip_name">172.16.2.1</field>
+            <field name="url">https://aws.amazon.com/console</field>
+            <field name="password_name">Delt@AWS99</field>
+            <field name="description">Delta AWS Console.</field>
+            <field name="password_form_id" ref="demo_pwd_form_delta"/>
+            <field name="partner_id" ref="demo_partner_delta_1"/>
+        </record>
+        <record id="demo_line_delta_2" model="device.list.lines">
+            <field name="device_id" ref="device_ftp_1"/>
+            <field name="user_name">delta_ftp</field>
+            <field name="name">Delta FTP Server</field>
+            <field name="ip_name">172.16.2.2</field>
+            <field name="url">ftp://delta-ent.com</field>
+            <field name="password_name">FtpDelt@!</field>
+            <field name="description">Delta FTP.</field>
+            <field name="password_form_id" ref="demo_pwd_form_delta"/>
+            <field name="partner_id" ref="demo_partner_delta_1"/>
+        </record>
+        <record id="demo_line_delta_3" model="device.list.lines">
+            <field name="device_id" ref="device_wordpress_1"/>
+            <field name="user_name">delta_wp</field>
+            <field name="name">Delta Website</field>
+            <field name="ip_name">172.16.2.3</field>
+            <field name="url">https://delta-ent.com/wp-admin</field>
+            <field name="password_name">WPDelt@2026</field>
+            <field name="description">Delta WordPress.</field>
+            <field name="password_form_id" ref="demo_pwd_form_delta"/>
+            <field name="partner_id" ref="demo_partner_delta_1"/>
+        </record>
+    </data>
+</odoo>
