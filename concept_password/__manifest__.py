@@ -1,5 +1,5 @@
 {
-    'name' : 'Concept Password Managment',
+    'name' : 'Concept Password Management',
     'author' : 'Concept Solution',
     'sequence' : '0',
     'website': 'https://www.csloman.com',
